@@ -106,3 +106,15 @@ This file contains helper functions for working with polygon data.
 - `PolygonList`: A component within the sidebar that displays a list of all active polygons and provides actions like editing and deleting them.
 - `ColorRuleModal`: A modal component that allows users to configure the name, dataset, and color rules for a selected polygon.
 - **UI Components**: The project uses a library of custom UI components for consistency and accessibility, including `Button`, `Input`, `Select`, `Dialog`, `Popover`, `ScrollArea`, `Tabs`, and `Slider`.
+
+### Desktop View
+
+![Banner](/public/images/ss1.png)
+
+### Mobile View
+
+![Banner](/public/images/ss3.png)
+
+### Edit polygon details
+
+![Banner](/public/images/ss2.png)
