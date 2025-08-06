@@ -53,53 +53,6 @@ export function ConfigurationSidebar({
             </div>
           </div>
 
-          {/* Drawing Tools */}
-          <div className="p-4 border-b border-gray-200">
-            <h3 className="text-sm font-medium text-gray-900 mb-3">
-              Drawing Tools
-            </h3>
-            <div className="space-y-2">
-              <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
-                <PopoverTrigger asChild>
-                  <Button
-                    onClick={() => setIsPopoverOpen(!isPopoverOpen)}
-                    disabled={mapState.isDrawing}
-                    className="w-full justify-center"
-                  >
-                    <MapPinXInside className="w-4 h-4 mr-2" />
-                    {mapState.isDrawing ? "Drawing Active..." : "Draw Polygon"}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-80 mr-2">
-                  <div className=" space-y-4 ">
-                    <div className="space-y-2">
-                      <h4 className="leading-none font-medium">Dataset</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Select a dataset for the polygon
-                      </p>
-                    </div>
-                    <Select
-                      onValueChange={(e) => {
-                        onStartDrawing(e);
-                        setIsPopoverOpen(false);
-                      }}
-                    >
-                      <SelectTrigger>Select a dataset</SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="temperature">Temperature</SelectItem>
-                        <SelectItem value="wind">Wind</SelectItem>
-                        <SelectItem value="cloud">Cloud</SelectItem>
-                        <SelectItem value="precipitation">
-                          Precipitation
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </PopoverContent>
-              </Popover>
-            </div>
-          </div>
-
           {/* Active Polygons */}
           <div className="flex-1 overflow-y-auto">
             <PolygonList />
